@@ -57,4 +57,11 @@ mkdir /etc/udev/rules.d/70-persistent-net.rules
 rm -rf /dev/.udev/
 rm /lib/udev/rules.d/75-persistent-net-generator.rules
 
+rm -f /etc/ssh/ssh_host_*_key
+ssh-keygen -f /etc/ssh/ssh_host_rsa_key -t rsa -N ''
+ssh-keygen -f /etc/ssh/ssh_host_dsa_key -t dsa -N ''
+
+rm -f /var/cache/apt/archives/*.deb
+rm -f /root/.bash_history
+history -c
 exit
