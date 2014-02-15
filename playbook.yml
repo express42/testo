@@ -1,0 +1,14 @@
+---
+- hosts: vagrant
+  sudo: true
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: vagrant
+  roles:
+    - role: rothgar.PostgreSQL_Server
+  tasks:
+    - name: test
+      template:
+        src: templates/test.txt
+        dest: /root/test.txt

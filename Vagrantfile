@@ -5,5 +5,10 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "from_packer"
+  config.vm.box = "ubuntu12.04-chef11-parallels"
+
+  config.vm.provision "ansible" do |ansible|
+    ansible.inventory_path = "inventory.ini"
+    ansible.playbook = "playbook.yml"
+  end
 end

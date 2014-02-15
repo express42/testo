@@ -1,0 +1,7 @@
+---
+- hosts: all
+  sudo: True
+  vars_files:
+    - roles/common/vars/main.yml
+  roles:
+    - common

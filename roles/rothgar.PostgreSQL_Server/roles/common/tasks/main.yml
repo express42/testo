@@ -1,0 +1,21 @@
+---
+# tasks file for postgresql
+
+- name: Install libselinux if needed
+  yum: name=libselinux-python state=present
+  when: ansible_selinux == True
+
+- name: Add PostgreSQL repo
+  template: src={{ ansible_distribution }}.repo
+    dest=/etc/yum.repos.d/pgdg-{{ postgresql_version|replace('.', '') }}-{{ ansible_distribution|lower() }}.repo
+  when: ansible_pkg_mgr == 'yum'
+
+- name: Add GPG key
+  copy: src=RPM-GPG-KEY-PGDG-{{ postgresql_version|replace('.','') }}
+    dest=/etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG-{{ postgresql_version|replace('.','') }}
+  when: ansible_pkg_mgr == 'yum'
+
+- name: Install PostgreSQL Server
+  yum: name=postgresql{{ postgresql_version|replace('.', '') }}-server state=present
+    #conf_file=/etc/yum.repos.d/pgdg-{{ postgresql_version|replace('.', '') }}-{{ ansible_distribution|lower() }}.repo
+  when: ansible_pkg_mgr == 'yum'
