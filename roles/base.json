@@ -1,0 +1,17 @@
+{
+  "name": "base",
+  "description": "common for all",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "run_list": [
+    "recipe[chef-client]",
+    "recipe[user::data_bag]",
+    "recipe[ssh_known_hosts]",
+    "recipe[base]",
+    "recipe[apt]",
+    "recipe[sysctl]",
+    "recipe[ntp]",
+    "recipe[sudo]",
+    "recipe[openssh]"
+  ]
+}

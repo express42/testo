@@ -1,0 +1,24 @@
+{
+  "name": "vagrant",
+  "description": "Vagrant environment",
+  "cookbook_versions": {
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "openssh": {
+      "server": {
+        "password_authentication": "yes",
+        "allow_agent_forwarding": "yes",
+        "use_dns": "no",
+        "permit_root_login": "yes",
+        "subsystem": "sftp /usr/lib/openssh/sftp-server"
+      }
+    },
+    "postfix": {
+      "options": {
+        "mydomain": "testo"
+      }
+    }
+  }
+}

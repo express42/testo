@@ -1,15 +1,28 @@
 #!/usr/bin/env ruby
-#^syntax detection
 
 site 'http://community.opscode.com/api/v1'
 
-# cookbook 'chef-client'
+cookbook "chef-client"
+cookbook "ssh_known_hosts"
+cookbook "openssh"
 
-# cookbook 'apache2', '>= 1.0.0'
+cookbook "user",
+    :git => "https://github.com/fnichol/chef-user.git"
 
-# cookbook 'rvm',
-#   :git => 'https://github.com/fnichol/chef-rvm'
+cookbook "apt",
+    :git => "git@github.com:opscode-cookbooks/apt.git"
 
-# cookbook 'postgresql',
-#   :git => 'https://github.com/findsyou/cookbooks',
-#   :ref => 'postgresql-improvements'
+cookbook "ntp",
+    :git => "https://github.com/opscode-cookbooks/ntp.git"
+
+cookbook "sudo",
+    :git => "git@github.com:express42-cookbooks/sudo.git"
+
+cookbook "lvm",
+    :git => "https://github.com/opscode-cookbooks/lvm.git"
+
+cookbook "base",
+    :file => "site-cookbooks/base"
+
+cookbook "sysctl",
+    :git => "git@github.com:express42-cookbooks/sysctl.git"
