@@ -3,7 +3,7 @@ DEPENDENCIES
     git: git@github.com:opscode-cookbooks/apt.git
     revision: ac1917c66a9d67fb4a0afeffaa92195b7385887e
   base
-    path: site-cookbooks/base
+    path: cookbooks/base
   chef-client
   lvm
     git: https://github.com/opscode-cookbooks/lvm.git

@@ -20,7 +20,7 @@ cookbook 'lvm',
   git: 'https://github.com/opscode-cookbooks/lvm.git'
 
 cookbook 'base',
-  path: 'site-cookbooks/base'
+  path: 'cookbooks/base'
 
 cookbook 'sysctl',
   git: 'git@github.com:express42-cookbooks/sysctl.git'
