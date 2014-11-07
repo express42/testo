@@ -1,8 +1,9 @@
-source 'https://api.berkshelf.com'
+source "https://supermarket.getchef.com"
 
 cookbook 'chef-client'
 cookbook 'ssh_known_hosts'
 cookbook 'openssh'
+cookbook 'cron'
 
 cookbook 'user',
   git: 'https://github.com/fnichol/chef-user.git'
@@ -24,3 +25,9 @@ cookbook 'base',
 
 cookbook 'sysctl',
   git: 'git@github.com:express42-cookbooks/sysctl.git'
+
+cookbook 'aptly',
+  :git => "https://github.com/express42-cookbooks/chef-aptly"
+
+cookbook 'nginx',
+  :git => "https://github.com/evilmartians/chef-nginx"
