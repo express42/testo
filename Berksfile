@@ -1,6 +1,7 @@
 source "https://supermarket.getchef.com"
 
 cookbook 'chef-client'
+cookbook 'chef-server'
 cookbook 'ssh_known_hosts'
 cookbook 'openssh'
 cookbook 'cron'
