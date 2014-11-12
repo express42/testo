@@ -24,8 +24,7 @@ cookbook 'lvm',
 cookbook 'base',
   path: 'cookbooks/base'
 
-cookbook 'sysctl',
-  git: 'git@github.com:express42-cookbooks/sysctl.git'
+cookbook 'sysctl'
 
 cookbook 'aptly',
   :git => "https://github.com/express42-cookbooks/chef-aptly"
