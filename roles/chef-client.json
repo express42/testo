@@ -1,0 +1,22 @@
+{
+  "name": "chef-client",
+  "description": "Install chef-client daemon and remove validation.pem",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "chef_client": {
+      "interval": "300",
+      "splay": "10",
+      "logrotate": {
+	"frequency": "daily",
+	"rotate": "7",
+
+      }
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[chef-client::config]",
+    "recipe[chef-client::init_service]",
+    "recipe[chef-client::delete_validation]"
+  ]
+}
