@@ -3,15 +3,30 @@
   "description": "common for all",
   "chef_type": "role",
   "json_class": "Chef::Role",
+  "default_attributes": {
+    "chef_client": {
+      "interval": "300",
+      "log_file": "client.log",
+      "logrotate": {
+        "frequency": "daily",
+        "rotate": "7"
+      },
+      "splay": "10"
+    }
+  },
+  "override_attributes": {
+  },
   "run_list": [
-    "role[chef-client]",
-    "recipe[user::data_bag]",
-    "recipe[ssh_known_hosts]",
-    "recipe[base]",
     "recipe[apt]",
-    "recipe[sysctl]",
+    "recipe[base]",
+    "recipe[chef-client::config]",
+    "recipe[chef-client::init_service]",
+    "recipe[chef-client::delete_validation]",
+    "recipe[openssh]",
     "recipe[ntp]",
+    "recipe[ssh_known_hosts]",
     "recipe[sudo]",
-    "recipe[openssh]"
+    "recipe[sysctl]",
+    "recipe[user::data_bag]"
   ]
 }
