@@ -1,4 +1,5 @@
 .vagrant/
+berks-cookbooks/
 packer/packer_cache
 packer/output
 packer/packer_virtualbox-iso_virtualbox.box
