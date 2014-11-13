@@ -22,3 +22,6 @@ cookbook 'aptly',
 
 cookbook 'nginx',
   git: 'git@github.com:evilmartians/chef-nginx'
+
+cookbook 'rsyslog',
+  git: 'git@github.com:express42-cookbooks/rsyslog.git'
