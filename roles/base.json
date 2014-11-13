@@ -4,6 +4,11 @@
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "include_sudoers_d": "true"
+      }
+    },
     "chef_client": {
       "interval": "300",
       "log_file": "client.log",
@@ -20,6 +25,13 @@
     }
   },
   "override_attributes": {
+    "authorization": {
+      "sudo": {
+        "groups": [
+          "sudo"
+        ]
+      }
+    }
   },
   "run_list": [
     "recipe[apt]",
