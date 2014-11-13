@@ -1,33 +1,30 @@
-source "https://supermarket.getchef.com"
+source 'https://supermarket.getchef.com'
 
 cookbook 'chef-client'
 cookbook 'chef-server'
-cookbook 'ssh_known_hosts'
-cookbook 'openssh'
 cookbook 'cron'
-
-cookbook 'user',
-  git: 'https://github.com/fnichol/chef-user.git'
-
-cookbook 'apt',
-  git: 'git@github.com:opscode-cookbooks/apt.git'
-
-cookbook 'ntp',
-  git: 'https://github.com/opscode-cookbooks/ntp.git'
-
-cookbook 'sudo',
-  git: 'git@github.com:express42-cookbooks/sudo.git'
-
-cookbook 'lvm',
-  git: 'https://github.com/opscode-cookbooks/lvm.git'
+cookbook 'openssh'
+cookbook 'ssh_known_hosts'
+cookbook 'sysctl'
+cookbook 'user'
 
 cookbook 'base',
   path: 'cookbooks/base'
 
-cookbook 'sysctl'
+cookbook 'apt',
+  git: 'git@github.com:opscode-cookbooks/apt.git'
 
 cookbook 'aptly',
-  :git => "https://github.com/express42-cookbooks/chef-aptly"
+  git: 'git@github.com:express42-cookbooks/chef-aptly'
+
+cookbook 'lvm',
+  git: 'git@github.com:opscode-cookbooks/lvm.git'
 
 cookbook 'nginx',
-  :git => "https://github.com/evilmartians/chef-nginx"
+  git: 'git@github.com:evilmartians/chef-nginx'
+
+cookbook 'ntp',
+  git: 'git@github.com:opscode-cookbooks/ntp.git'
+
+cookbook 'sudo',
+  git: 'git@github.com:express42-cookbooks/sudo.git'
