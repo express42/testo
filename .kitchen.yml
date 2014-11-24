@@ -1,0 +1,22 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      box: express42/ubuntu-14.04
+      provider: parallels
+  - name: ubuntu-12.04
+    driver:
+      box: express42/ubuntu12.04-chef11
+      provider: parallels
+
+suites:
+  - name: default
+    run_list:
+      - role[base]
+    attributes:
