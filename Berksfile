@@ -1,5 +1,6 @@
 source 'https://supermarket.getchef.com'
 
+cookbook 'apt'
 cookbook 'chef-client'
 cookbook 'chef-server'
 cookbook 'cron'
@@ -13,9 +14,6 @@ cookbook 'user'
 
 cookbook 'base',
   path: 'cookbooks/base'
-
-cookbook 'apt',
-  git: 'git@github.com:opscode-cookbooks/apt.git'
 
 cookbook 'aptly',
   git: 'git@github.com:express42-cookbooks/chef-aptly'
