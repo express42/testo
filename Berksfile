@@ -2,6 +2,7 @@ source 'https://supermarket.getchef.com'
 
 group :base do
   cookbook 'apt'
+  cookbook 'base', path: 'cookbooks/base'
   cookbook 'certificate'
   cookbook 'chef-client'
   cookbook 'chef-server'
@@ -9,18 +10,12 @@ group :base do
   cookbook 'lvm'
   cookbook 'ntp'
   cookbook 'openssh'
+  cookbook 'postfix', git: 'git@github.com:express42-cookbooks/postfix.git'
+  cookbook 'rsyslog', git: 'git@github.com:express42-cookbooks/rsyslog.git'
   cookbook 'ssh_known_hosts'
   cookbook 'sudo'
   cookbook 'sysctl'
   cookbook 'user'
-  cookbook 'aptly',
-    git: 'git@github.com:express42-cookbooks/chef-aptly'
-  cookbook 'base',
-    path: 'cookbooks/base'
-  cookbook 'postfix',
-    git: 'git@github.com:express42-cookbooks/postfix.git'
-  cookbook 'rsyslog',
-    git: 'git@github.com:express42-cookbooks/rsyslog.git'
 end
 
 group :graylog do
@@ -31,7 +26,8 @@ group :graylog do
 end
 
 group :zabbix do
-  cookbook 'postgresql_lwrp'
+  cookbook 'postgresql_lwrp',
+    git: 'git@github.com:express42-cookbooks/postgresql.git'
   cookbook 'nginx',
     git: 'git@github.com:evilmartians/chef-nginx'
   cookbook 'php',
@@ -49,6 +45,8 @@ group :ruby do
 end
 
 group :services do
+  cookbook 'aptly',
+    git: 'git@github.com:express42-cookbooks/chef-aptly'
   cookbook 'cobbler',
     git: 'git@github.com:express42-cookbooks/cobbler.git'
   cookbook 'keepalived',
