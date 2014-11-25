@@ -4,6 +4,8 @@ driver:
 
 provisioner:
   name: chef_zero
+  client_rb:
+    environment: vagrant
 
 platforms:
   - name: ubuntu-14.04
@@ -16,7 +18,19 @@ platforms:
       provider: parallels
 
 suites:
-  - name: default
+  - name: base
     run_list:
       - role[base]
     attributes:
+  - name: graylog
+    run_list:
+      - role[base]
+      - role[graylog]
+  - name: zabbix
+    run_list:
+      - role[base]
+      - role[zabbix]
+  - name: ruby
+    run_list:
+      - role[base]
+      - role[ruby]
