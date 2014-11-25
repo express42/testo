@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+  - 2.0.0
+script:
+  - bundle exec rubocop
+  - bundle exec foodcritic -f any cookbooks
+  - bundle exec kitchen test -c 2 -d always
