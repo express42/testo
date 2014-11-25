@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/express42-cookbooks/testo.svg?branch=master)](https://travis-ci.org/express42-cookbooks/testo)
+
 # Overview
 
 To get a perfect pie every Chef should take a good testo (pastry in russian). Also this repository is a good start to test(o) a new Infrastructure as Code approach.
