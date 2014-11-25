@@ -18,6 +18,9 @@
       },
       "splay": "10"
     },
+    "ntp": {
+      "apparmor_enabled": false
+    },
     "openssh": {
       "server": {
         "subsystem": "sftp /usr/lib/openssh/sftp-server"
@@ -39,8 +42,11 @@
     "recipe[chef-client::config]",
     "recipe[chef-client::init_service]",
     "recipe[chef-client::delete_validation]",
-    "recipe[openssh]",
+    "recipe[lvm]",
     "recipe[ntp]",
+    "recipe[openssh]",
+    "recipe[postfix::default-server]",
+    "recipe[rsyslog]",
     "recipe[ssh_known_hosts]",
     "recipe[sudo]",
     "recipe[sysctl]",
