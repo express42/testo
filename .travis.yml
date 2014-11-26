@@ -3,4 +3,4 @@ rvm:
   - 2.1.5
 script:
   - bundle exec rubocop
-  - bundle exec foodcritic -f any cookbooks
+  - bundle exec foodcritic --epic-fail any --tags ~FC003 cookbooks
