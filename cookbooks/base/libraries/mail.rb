@@ -1,6 +1,7 @@
 require 'rubygems'
 
 module Express42
+  # Chef Error Handler, use gem pony to send report by email
   class MailHandler < Chef::Handler
     def initialize(from_address, to_address)
       @from_address = from_address
@@ -17,12 +18,10 @@ module Express42
       message << Array(backtrace).join("\n")
 
       Pony.mail(
-        :to => @to_address,
-        :from => @from_address,
-        :subject => subject,
-        :body => message)
-
+        to:      @to_address,
+        from:    @from_address,
+        subject: subject,
+        body:    message)
     end
   end
 end
-

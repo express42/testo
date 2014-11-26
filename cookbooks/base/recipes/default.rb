@@ -4,7 +4,7 @@
 #
 # Author:: LLC Express 42 (info@express42.com)
 #
-# Copyright (C) LLC 2012 Express 42
+# Copyright (C) LLC 2014 Express 42
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of
 # this software and associated documentation files (the "Software"), to deal in
@@ -25,44 +25,18 @@
 # SOFTWARE.
 #
 
-class Chef::Recipe
-  include Express42::Base::Network
+module Chef
+  # extend recipe by Network module
+  class Recipe
+    include Express42::Base::Network
+  end
 end
-
-=begin
-apt_repository "precise" do
-    action :add
-    uri 'http://mirror.yandex.ru/ubuntu'
-    distribution "squeeze"
-    components ['main', 'contrib', 'non-free']
-    notifies :run, resources(:execute => "apt-get-update"), :immediately
-end
-
-apt_repository "precise-updates" do
-    action :add
-    uri 'http://mirror.yandex.ru/ubuntu'
-    distribution "precise-updates"
-    components ['main', 'universe', "multiverse"]
-end
-
-apt_repository "precise-security" do
-    action :add
-    uri 'http://security.ubuntu.com'
-    distribution "precise-security"
-    components ['main', 'universe', "multiverse"]
-end
-
-apt_repository "chef-0.10" do
-    uri ' http://apt.opscode.com precise-0.10'
-    components ['main']
-    key 'http://apt.opscode.com/packages@opscode.com.gpg.key'
-end
-=end
 
 (node['base']['packages'] + node['base']['extra-packages']).uniq.each do |pkg|
-    package pkg
+  package pkg
 end
 
-chef_gem "pony"
-
-Chef::Config.exception_handlers = [Express42::MailHandler.new('chef@project.ru', ['admin@project.ru'])]
+if node.chef_environment == 'production' && !node['base']['handler']['mail_to'].empty?
+  chef_gem 'pony'
+  Chef::Config.exception_handlers = [Express42::MailHandler.new(node['base']['handler']['mail_from'], node['base']['handler']['mail_to'])]
+end
