@@ -26,31 +26,21 @@ group :graylog do
 end
 
 group :zabbix do
-  cookbook 'postgresql_lwrp',
-    git: 'git@github.com:express42-cookbooks/postgresql.git'
-  cookbook 'nginx',
-    git: 'git@github.com:evilmartians/chef-nginx'
-  cookbook 'php',
-    git: 'git@github.com:express42-cookbooks/php.git'
-  cookbook 'zabbix',
-    git: 'git@github.com:express42-cookbooks/zabbix.git'
-  cookbook 'zabbix-server',
-    git: 'git@github.com:express42-cookbooks/zabbix-server.git', branch: 'new_era'
+  cookbook 'postgresql_lwrp', git: 'git@github.com:express42-cookbooks/postgresql.git'
+  cookbook 'nginx', git: 'git@github.com:evilmartians/chef-nginx'
+  cookbook 'php', git: 'git@github.com:express42-cookbooks/php.git'
+  cookbook 'zabbix', git: 'git@github.com:express42-cookbooks/zabbix.git'
+  cookbook 'zabbix-server', git: 'git@github.com:express42-cookbooks/zabbix-server.git', branch: 'new_era'
 end
 
 group :ruby do
-  cookbook 'ruby',
-    git: 'git@github.com:express42-cookbooks/ruby.git'
+  cookbook 'ruby', git: 'git@github.com:express42-cookbooks/ruby.git'
   cookbook 'runit'
 end
 
 group :services do
-  cookbook 'aptly',
-    git: 'git@github.com:express42-cookbooks/chef-aptly'
-  cookbook 'cobbler',
-    git: 'git@github.com:express42-cookbooks/cobbler.git'
-  cookbook 'keepalived',
-    git: 'git@github.com:express42-cookbooks/keepalived.git'
-  cookbook 'openvpn',
-    git: 'git@github.com:express42-cookbooks/openvpn.git'
+  cookbook 'aptly', git: 'git@github.com:express42-cookbooks/chef-aptly'
+  cookbook 'cobbler', git: 'git@github.com:express42-cookbooks/cobbler.git'
+  cookbook 'keepalived', git: 'git@github.com:express42-cookbooks/keepalived.git'
+  cookbook 'openvpn', git: 'git@github.com:express42-cookbooks/openvpn.git'
 end
