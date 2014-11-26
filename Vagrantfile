@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ['modifyvm', :id, '--memory', '1024']
     end
 
-#    main.chef_zero.chef_repo_path = '.'
+    # main.chef_zero.chef_repo_path = '.'
 
     main.vm.provision :chef_solo do |chef|
       chef.environment = 'vagrant'
