@@ -4,3 +4,5 @@ rvm:
 script:
   - bundle exec rubocop
   - bundle exec foodcritic --contex --epic-fail any --tags ~FC048 cookbooks
+notifications:
+  flowdock: d4fbb65de6c9c868a2dfc4b38fbd34c1
