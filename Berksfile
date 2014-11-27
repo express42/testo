@@ -2,11 +2,11 @@ source 'https://supermarket.getchef.com'
 
 group :base do
   cookbook 'apt'
-  cookbook 'base', path: 'cookbooks/base'
   cookbook 'certificate'
   cookbook 'chef-client'
   cookbook 'chef-server'
   cookbook 'cron'
+  cookbook 'helpers-express42', git: 'git@github.com:express42-cookbooks/helpers-express42.git'
   cookbook 'lvm'
   cookbook 'ntp'
   cookbook 'openssh'
