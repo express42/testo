@@ -3,6 +3,6 @@ rvm:
   - 2.1.5
 script:
   - bundle exec rubocop
-  - bundle exec foodcritic --contex --epic-fail any --tags ~FC048 cookbooks
+  - bundle exec foodcritic --contex --epic-fail any cookbooks
 notifications:
   flowdock: d4fbb65de6c9c868a2dfc4b38fbd34c1
