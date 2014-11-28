@@ -52,6 +52,7 @@
     "recipe[ssh_known_hosts]",
     "recipe[sudo]",
     "recipe[sysctl]",
+    "recipe[timezone-ii]",
     "recipe[user::data_bag]"
   ]
 }
