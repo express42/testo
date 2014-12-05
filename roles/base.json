@@ -47,7 +47,7 @@
     "recipe[lvm]",
     "recipe[ntp]",
     "recipe[openssh]",
-    "recipe[postfix::default-server]",
+    "recipe[postfix::default_server]",
     "recipe[rsyslog]",
     "recipe[ssh_known_hosts]",
     "recipe[sudo]",
