@@ -9,6 +9,7 @@ group :base do
   cookbook 'lvm'
   cookbook 'ntp'
   cookbook 'openssh'
+  cookbook 'os-hardening'
   cookbook 'postfix', git: 'git@github.com:express42-cookbooks/postfix.git'
   cookbook 'rsyslog', git: 'git@github.com:express42-cookbooks/rsyslog.git'
   cookbook 'ssh_known_hosts'
