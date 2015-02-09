@@ -1,6 +1,6 @@
 {
   "name": "base",
-  "description": "common for all",
+  "description": "Base role",
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {
@@ -44,6 +44,7 @@
     "recipe[helpers-express42::mail]",
     "recipe[helpers-express42::network]",
     "recipe[helpers-express42::packages]",
+    "recipe[locale]",
     "recipe[lvm]",
     "recipe[ntp]",
     "recipe[openssh]",

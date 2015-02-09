@@ -1,4 +1,4 @@
-source 'https://supermarket.getchef.com'
+source 'https://supermarket.chef.io'
 
 group :base do
   cookbook 'apt'
@@ -6,6 +6,7 @@ group :base do
   cookbook 'chef-client'
   cookbook 'cron'
   cookbook 'helpers-express42', git: 'git@github.com:express42-cookbooks/helpers-express42.git'
+  cookbook 'locale'
   cookbook 'lvm'
   cookbook 'ntp'
   cookbook 'openssh'
