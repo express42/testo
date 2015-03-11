@@ -22,7 +22,7 @@ end
 
 group :databases do
   cookbook 'mongodb'
-  cookbook 'postgresql_lwrp', git: 'git@github.com:express42-cookbooks/postgresql.git'
+  cookbook 'postgresql_lwrp', git: 'git@github.com:express42-cookbooks/postgresql_lwrp.git'
   cookbook 'redis', git: 'git@github.com:express42-cookbooks/redis.git'
 end
 
@@ -30,7 +30,7 @@ group :development do
   cookbook 'java'
   cookbook 'jenkins'
   cookbook 'php', git: 'git@github.com:express42-cookbooks/php.git'
-  cookbook 'ruby', git: 'git@github.com:express42-cookbooks/ruby.git'
+  cookbook 'ruby_lwrp', git: 'git@github.com:express42-cookbooks/ruby_lwrp.git'
   cookbook 'runit'
 end
 
@@ -56,7 +56,7 @@ end
 group :zabbix do
   cookbook 'nginx', git: 'git@github.com:evilmartians/chef-nginx', tag: 'v2.2.4'
   cookbook 'php', git: 'git@github.com:express42-cookbooks/php.git'
-  cookbook 'postgresql_lwrp', git: 'git@github.com:express42-cookbooks/postgresql.git'
+  cookbook 'postgresql_lwrp', git: 'git@github.com:express42-cookbooks/postgresql_lwrp.git'
   cookbook 'zabbix', git: 'git@github.com:express42-cookbooks/zabbix.git'
   cookbook 'zabbix_server', git: 'git@github.com:express42-cookbooks/zabbix-server.git'
   cookbook 'zabbix-templates', git: 'git@github.com:express42-cookbooks/zabbix-templates.git'
