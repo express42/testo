@@ -52,7 +52,7 @@
     "recipe[rsyslog]",
     "recipe[ssh_known_hosts]",
     "recipe[sudo]",
-    "recipe[sysctl]",
+    "recipe[sysctl::apply]",
     "recipe[timezone-ii]",
     "recipe[user::data_bag]"
   ]
