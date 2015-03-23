@@ -18,6 +18,7 @@ group :base do
   cookbook 'sysctl'
   cookbook 'timezone-ii'
   cookbook 'user'
+  cookbook 'resolver'
 end
 
 group :databases do
