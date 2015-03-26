@@ -19,6 +19,7 @@ group :base do
   cookbook 'timezone-ii'
   cookbook 'user'
   cookbook 'resolver'
+  cookbook 'chef-vault'
 end
 
 group :databases do
