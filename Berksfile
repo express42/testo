@@ -5,7 +5,7 @@ group :base do
   cookbook 'certificate'
   cookbook 'chef-client'
   cookbook 'cron'
-  cookbook 'helpers-express42', git: 'git@github.com:express42-cookbooks/helpers-express42.git'
+  cookbook 'helpers_express42', git: 'git@github.com:express42-cookbooks/helpers_express42.git'
   cookbook 'locale'
   cookbook 'lvm'
   cookbook 'ntp'
