@@ -61,5 +61,5 @@ group :zabbix do
   cookbook 'postgresql_lwrp', git: 'git@github.com:express42-cookbooks/postgresql_lwrp.git'
   cookbook 'zabbix', git: 'git@github.com:express42-cookbooks/zabbix.git'
   cookbook 'zabbix_server', git: 'git@github.com:express42-cookbooks/zabbix-server.git'
-  cookbook 'zabbix-templates', git: 'git@github.com:express42-cookbooks/zabbix-templates.git'
+  cookbook 'zabbix_templates', git: 'git@github.com:express42-cookbooks/zabbix_templates.git'
 end
