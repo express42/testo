@@ -20,6 +20,7 @@ group :base do
   cookbook 'user'
   cookbook 'resolver'
   cookbook 'chef-vault'
+  cookbook 'bsw_gpg'
 end
 
 group :databases do
