@@ -19,7 +19,8 @@
       "splay": "10"
     },
     "ntp": {
-      "apparmor_enabled": false
+      "apparmor_enabled": false,
+      "use_cmos": true
     },
     "openssh": {
       "server": {
