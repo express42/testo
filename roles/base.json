@@ -20,7 +20,7 @@
     },
     "ntp": {
       "apparmor_enabled": false,
-      "use_cmos": true
+      "use_cmos": false
     },
     "openssh": {
       "server": {
