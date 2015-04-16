@@ -2,8 +2,10 @@ source 'https://supermarket.chef.io'
 
 group :base do
   cookbook 'apt'
+  cookbook 'bsw_gpg'
   cookbook 'certificate'
   cookbook 'chef-client'
+  cookbook 'chef-vault'
   cookbook 'cron'
   cookbook 'helpers_express42', git: 'git@github.com:express42-cookbooks/helpers_express42.git'
   cookbook 'locale'
@@ -12,15 +14,13 @@ group :base do
   cookbook 'openssh'
   cookbook 'os-hardening'
   cookbook 'postfix', git: 'git@github.com:express42-cookbooks/postfix.git'
+  cookbook 'resolver'
   cookbook 'rsyslog', git: 'git@github.com:express42-cookbooks/rsyslog.git'
   cookbook 'ssh_known_hosts'
   cookbook 'sudo'
   cookbook 'sysctl'
   cookbook 'timezone-ii'
   cookbook 'user'
-  cookbook 'resolver'
-  cookbook 'chef-vault'
-  cookbook 'bsw_gpg'
 end
 
 group :databases do
