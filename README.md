@@ -94,6 +94,16 @@ $ vagrant reload
 $ vagrant destroy
 ```
 
+# Test Kitchen
+
+First install the [latest release of Vagrant][Vagrant].
+```
+$ kitchen list
+$ kitchen converge base-ubuntu-1404
+$ kitchen login base-ubuntu-1404
+$ kitchen destroy base-ubuntu-1404
+```
+
 # Next Steps
 
 Read the README file in each of the subdirectories for more information about what goes in those directories.
