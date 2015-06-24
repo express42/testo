@@ -19,7 +19,7 @@ group :base do
   cookbook 'ssh_known_hosts'
   cookbook 'sudo'
   cookbook 'sysctl'
-  cookbook 'timezone-ii'
+  cookbook 'timezone-ii', git: 'git@github.com:L2G/timezone-ii.git'
   cookbook 'user'
 end
 
@@ -30,14 +30,19 @@ group :databases do
 end
 
 group :development do
+  cookbook 'git'
+  cookbook 'golang'
   cookbook 'java'
   cookbook 'jenkins'
+  cookbook 'nodejs'
+  cookbook 'pm2'
   cookbook 'php', git: 'git@github.com:express42-cookbooks/php.git'
   cookbook 'ruby_lwrp', git: 'git@github.com:express42-cookbooks/ruby_lwrp.git'
   cookbook 'runit'
 end
 
 group :graylog2 do
+  cookbook 'authbind'
   cookbook 'elasticsearch'
   cookbook 'graylog2'
   cookbook 'java'
@@ -55,6 +60,7 @@ group :services do
   cookbook 'openvpn', git: 'git@github.com:express42-cookbooks/openvpn.git'
   cookbook 'rabbitmq'
   cookbook 's3backup', git: 'git@github.com:express42-cookbooks/s3backup.git'
+  cookbook 's3_file'
 end
 
 group :zabbix do
