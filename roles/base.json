@@ -4,38 +4,8 @@
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "authorization": {
-      "sudo": {
-        "include_sudoers_d": "true"
-      }
-    },
-    "chef_client": {
-      "interval": "300",
-      "log_file": "client.log",
-      "logrotate": {
-        "frequency": "daily",
-        "rotate": "7"
-      },
-      "splay": "10"
-    },
-    "ntp": {
-      "apparmor_enabled": false,
-      "use_cmos": false
-    },
-    "openssh": {
-      "server": {
-        "subsystem": "sftp /usr/lib/openssh/sftp-server"
-      }
-    }
   },
   "override_attributes": {
-    "authorization": {
-      "sudo": {
-        "groups": [
-          "sudo"
-        ]
-      }
-    }
   },
   "run_list": [
     "recipe[apt]",
