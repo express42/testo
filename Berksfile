@@ -36,8 +36,8 @@ group :development do
   cookbook 'jenkins'
   cookbook 'nodejs'
   cookbook 'pm2'
-  cookbook 'php', git: 'git@github.com:express42-cookbooks/php.git'
-  cookbook 'ruby_lwrp', git: 'git@github.com:express42-cookbooks/ruby_lwrp.git'
+  cookbook 'php-fpm'
+  cookbook 'ruby_lwrp'
   cookbook 'runit'
 end
 
@@ -65,7 +65,7 @@ end
 
 group :zabbix do
   cookbook 'nginx', git: 'git@github.com:evilmartians/chef-nginx', tag: 'v2.2.4'
-  cookbook 'php', git: 'git@github.com:express42-cookbooks/php.git'
+  cookbook 'php-fpm'
   cookbook 'postgresql_lwrp', git: 'git@github.com:express42-cookbooks/postgresql_lwrp.git'
   cookbook 'zabbix_lwrp', git: 'git@github.com:express42-cookbooks/zabbix_lwrp.git'
   cookbook 'zabbix_templates', git: 'git@github.com:express42-cookbooks/zabbix_templates.git'
