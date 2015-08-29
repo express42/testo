@@ -1,0 +1,11 @@
+{
+  "id": "users",
+  "users": {
+    "zabbix": {
+      "options": {
+        "password": "fced396df30cc3590d8a0deeeaf3eb70",
+        "superuser": false
+      }
+    }
+  }
+}

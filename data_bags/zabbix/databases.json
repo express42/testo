@@ -1,0 +1,10 @@
+{
+  "id": "databases",
+  "databases": {
+    "zabbix": {
+      "options": {
+        "owner": "zabbix"
+      }
+    }
+  }
+}
