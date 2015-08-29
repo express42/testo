@@ -1,0 +1,27 @@
+{
+  "name": "zabbix-server",
+  "description": "Installs and configures Zabbix server",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[nginx::official-repo]",
+    "recipe[postgresql_lwrp::apt_official_repository]",
+    "recipe[zabbix_lwrp::default]",
+    "recipe[zabbix_lwrp::host]",
+    "recipe[zabbix_lwrp::partition]",
+    "recipe[zabbix_lwrp::database]",
+    "recipe[zabbix_lwrp::server]",
+    "recipe[zabbix_lwrp::web]",
+    "recipe[zabbix_templates::default]",
+    "recipe[zabbix_templates::linux]",
+    "recipe[zabbix_templates::postgresql]",
+    "recipe[zabbix_templates::zabbix-server]",
+    "recipe[zabbix_lwrp::connect]"
+  ],
+  "env_run_lists": {
+  }
+}
