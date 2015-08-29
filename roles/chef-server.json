@@ -1,0 +1,19 @@
+{
+  "name": "chef-server",
+  "description": "Installs and configures Chef server",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "chef-server": {
+      "addons": ["manage"]
+    }
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[chef-server]",
+    "recipe[chef-server::addons]"
+  ],
+  "env_run_lists": {
+  }
+}
