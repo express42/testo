@@ -21,4 +21,15 @@ suites:
   - name: base
     run_list:
       - role[base]
-    attributes:
+  - name: chef-server
+    run_list:
+      - role[base]
+      - role[chef-server]
+  - name: graylog-server
+    run_list:
+      - role[base]
+      - role[graylog-server]
+  - name: zabbix-server
+    run_list:
+      - role[base]
+      - role[zabbix-server]
