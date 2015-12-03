@@ -59,7 +59,6 @@ group :services do
   cookbook 'nginx', git: 'git@github.com:evilmartians/chef-nginx', tag: 'v2.2.4'
   cookbook 'openvpn', git: 'git@github.com:express42-cookbooks/openvpn.git'
   cookbook 'rabbitmq'
-  cookbook 's3backup', git: 'git@github.com:express42-cookbooks/s3backup.git'
   cookbook 's3_file'
 end
 
