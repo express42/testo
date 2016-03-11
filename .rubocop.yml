@@ -1,4 +1,4 @@
 LineLength:
     Enabled: false
-SingleSpaceBeforeFirstArg:
+SpaceBeforeFirstArg:
     Enabled: false
