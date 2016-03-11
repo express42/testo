@@ -74,5 +74,4 @@ suites:
       - recipe[memcached]
       - recipe[nfs]
       - recipe[rabbitmq]
-      - recipe[s3backup]
       - recipe[s3_file]
