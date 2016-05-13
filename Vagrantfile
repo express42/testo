@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = '2'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.berkshelf.enable = true
+  config.berkshelf.enabled = true
 
   config.vm.define :testo do |main|
     main.vm.box = 'express42/ubuntu-14.04'
