@@ -25,14 +25,14 @@ suites:
   - name: chef-server
     driver:
       customize:
-        memsize: 2048
+        memory: 2048
     run_list:
       - role[base]
       - role[chef-server]
   - name: graylog-server
     driver:
       customize:
-        memsize: 2048
+        memory: 2048
     run_list:
       - role[base]
       - role[graylog-server]
@@ -74,5 +74,4 @@ suites:
       - recipe[memcached]
       - recipe[nfs]
       - recipe[rabbitmq]
-      - recipe[s3backup]
       - recipe[s3_file]
