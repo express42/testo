@@ -25,14 +25,14 @@ suites:
   - name: chef-server
     driver:
       customize:
-        memory: 2048
+        <%= ENV['VAGRANT_DEFAULT_PROVIDER'] == 'parallels' ? 'memsize' : 'memory' %>: 2048
     run_list:
       - role[base]
       - role[chef-server]
   - name: graylog-server
     driver:
       customize:
-        memory: 2048
+        <%= ENV['VAGRANT_DEFAULT_PROVIDER'] == 'parallels' ? 'memsize' : 'memory' %>: 2048
     run_list:
       - role[base]
       - role[graylog-server]
