@@ -7,7 +7,8 @@
       "cluster": {
         "name": "graylog2"
       },
-      "version": "1.5.2"
+      "version": "1.5.2",
+      "allocated_memory": "512m"
     },
     "graylog2": {
       "password_secret": "NP8GePxntdVuQ5L3rK80fOR9mVU0gmopqMpmZdR58m7IZVo9hL4nIgGdG1L1Zh3O6jM0Delnso8EibLdhZ3F2lLXeklHdeib",
@@ -15,9 +16,13 @@
         "admin_access_token": "NlXQ1B375BQPdocO1hzoVTKowWjAsgGzIoHfm3zMR0lHU24341XszauM52L5EZu0shR6CMJtM9cwdpxKMhGGDoybtcRtiQif"
       },
       "root_password_sha2": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+      "server": {
+        "java_opts": "-Djava.net.preferIPv4Stack=true -Xms512m -Xmx512m -XX:NewRatio=1 -XX:PermSize=128m -XX:MaxPermSize=256m -server -XX:+ResizeTLAB -XX:+UseConcMarkSweepGC -XX:+CMSConcurrentMTEnabled -XX:+CMSClassUnloadingEnabled -XX:+UseParNewGC -XX:-OmitStackTraceInFastThrow"
+      },
       "web": {
         "secret": "NP8GePxntdVuQ5L3rK80fOR9mVU0gmopqMpmZdR58m7IZVo9hL4nIgGdG1L1Zh3O6jM0Delnso8EibLdhZ3F2lLXeklHdeib",
-        "timezone": "UTC"
+        "timezone": "UTC",
+        "java_opts": "-Djava.net.preferIPv4Stack=true -Xms512m -Xmx512m"
       }
     },
     "java": {
