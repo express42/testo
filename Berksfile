@@ -50,7 +50,6 @@ group :graylog2 do
 end
 
 group :services do
-  cookbook 'aptly', git: 'git@github.com:express42-cookbooks/chef-aptly'
   cookbook 'chef-server'
   cookbook 'cobbler', git: 'git@github.com:express42-cookbooks/cobbler.git'
   cookbook 'keepalived', git: 'git@github.com:express42-cookbooks/keepalived.git'

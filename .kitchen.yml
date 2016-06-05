@@ -14,9 +14,9 @@ platforms:
   - name: ubuntu-14.04
     driver:
       box: express42/ubuntu-14.04
-  - name: ubuntu-12.04
+  - name: ubuntu-16.04
     driver:
-      box: express42/ubuntu12.04-chef11
+      box: express42/ubuntu-16.04
 
 suites:
   - name: base
