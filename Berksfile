@@ -55,14 +55,14 @@ group :services do
   cookbook 'keepalived', git: 'git@github.com:express42-cookbooks/keepalived.git'
   cookbook 'memcached', git: 'git@github.com:express42-cookbooks/memcached.git'
   cookbook 'nfs'
-  cookbook 'nginx', git: 'git@github.com:evilmartians/chef-nginx', tag: 'v2.2.4'
+  cookbook 'nginx', git: 'git@github.com:evilmartians/chef-nginx'
   cookbook 'openvpn', git: 'git@github.com:express42-cookbooks/openvpn.git'
   cookbook 'rabbitmq'
   cookbook 's3_file'
 end
 
 group :zabbix do
-  cookbook 'nginx', git: 'git@github.com:evilmartians/chef-nginx', tag: 'v2.2.4'
+  cookbook 'nginx', git: 'git@github.com:evilmartians/chef-nginx'
   cookbook 'php-fpm'
   cookbook 'postgresql_lwrp'
   cookbook 'zabbix_lwrp'
