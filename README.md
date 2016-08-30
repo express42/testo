@@ -14,6 +14,7 @@ This repository contains several directories, and each directory contains a READ
 * `cookbooks/` - Contains cookbooks that have been downloaded from remote repositories or created locally.
 * `data_bags/` - Stores data bags (and data bag items) in JSON (.json).
 * `environments/` - Stores environment in JSON (.json).
+* `nodes/` - Stores nodes run lists in JSON (.json).
 * `packer/` - Stores packer templates.
 * `roles/` - Stores roles in JSON (.json).
 * `Vagrantfile` - Contains the Vagrant configuration.

@@ -1,6 +1,6 @@
 # Roles
 
-Create roles here, in either the Role Ruby DSL (.rb) or JSON (.json) files.
+Create roles here in the JSON files.
 
 To install roles on the server, use knife.
 

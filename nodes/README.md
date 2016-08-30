@@ -1,6 +1,6 @@
 # Nodes
 
-Create nodes here, in either the Node Ruby DSL (.rb) of JSON (.json) files.
+Create nodes here in the JSON files.
 
 To install nodes on the server, use knife.
 
@@ -23,7 +23,17 @@ $ knife node show NODE (options)
 $ knife node status [<node> <node> ...]
 ```
 
-# Example
+To import all nodes from the Chef server with attributes and run list, enter:
+```
+for node in `knife node list`; do knife node show $node -Fj > $node.json; done
+```
+
+To import all nodes with run list only, enter:
+```
+for node in `knife node list`; do knife node show $node -Fj -r > $node.json; done
+```
+
+# For example
 
 ```
 {
