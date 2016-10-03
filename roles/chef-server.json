@@ -4,7 +4,7 @@
   "json_class": "Chef::Role",
   "default_attributes": {
     "chef-server": {
-      "addons": ["manage"],
+      "addons": [],
       "accept_license": true
     }
   },
