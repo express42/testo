@@ -40,6 +40,7 @@ group :databases do
 end
 
 group :development do
+  cookbook 'build-essential'
   cookbook 'git'
   cookbook 'golang'
   cookbook 'java'
