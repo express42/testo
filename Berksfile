@@ -43,8 +43,8 @@ end
 
 group :graylog2 do
   cookbook 'authbind'
-  cookbook 'elasticsearch', '= 0.3.14'
-  cookbook 'graylog2', '< 2.0'
+  cookbook 'elasticsearch', '~> 2'
+  cookbook 'graylog2'
   cookbook 'java'
   cookbook 'mongodb', git: 'git@github.com:chef-brigade/mongodb-cookbook.git'
 end
