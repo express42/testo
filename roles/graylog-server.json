@@ -4,8 +4,7 @@
   "json_class": "Chef::Role",
   "default_attributes": {
     "elasticsearch": {
-      "version": "2.3.5",
-      "allocated_memory": "512m"
+      "version": "2.3.5"
     },
     "graylog2": {
       "password_secret": "NP8GePxntdVuQ5L3rK80fOR9mVU0gmopqMpmZdR58m7IZVo9hL4nIgGdG1L1Zh3O6jM0Delnso8EibLdhZ3F2lLXeklHdeib",
