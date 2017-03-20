@@ -24,7 +24,7 @@ group :base do
 end
 
 group :databases do
-  cookbook 'mongodb', git: 'git@github.com:chef-brigade/mongodb-cookbook.git'
+  cookbook 'sc-mongodb', git: 'git@github.com:chef-brigade/mongodb-cookbook.git'
   cookbook 'postgresql_lwrp'
   cookbook 'redis', git: 'git@github.com:express42-cookbooks/redis.git'
 end
@@ -46,7 +46,7 @@ group :graylog2 do
   cookbook 'elasticsearch', '= 0.3.14'
   cookbook 'graylog2', '< 2.0'
   cookbook 'java'
-  cookbook 'mongodb', git: 'git@github.com:chef-brigade/mongodb-cookbook.git'
+  cookbook 'sc-mongodb', git: 'git@github.com:chef-brigade/mongodb-cookbook.git'
 end
 
 group :services do
