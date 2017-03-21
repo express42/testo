@@ -3,8 +3,8 @@ rvm:
 - 2.1.5
 bundler_args: "--without kitchen_vagrant"
 before_install:
-- openssl aes-256-cbc -K $encrypted_19d896899cd0_key -iv $encrypted_19d896899cd0_iv
-  -in .travis/secret_keys.tar.enc -out .travis/secret_keys.tar -d
+- openssl aes-256-cbc -K $encrypted_6bb471548987_key -iv $encrypted_6bb471548987_iv
+  -in secret_keys.tar.enc -out secret_keys.tar -d
 - tar xf .travis/secret_keys.tar -C .travis
 - mv .travis/travis_rsa ~/.ssh/id_rsa
 script:
@@ -12,8 +12,9 @@ script:
 - bundle exec kitchen test -d always
 notifications:
   slack:
-    secure: 2gogsRTMlBlwV4J7OLQYTPQAlVgd3tsFwwMNk1Xco3acAcqa2SjjLMbZRGc/rfjqU7+c32QDsGSwGEmGzX94svaE592ZGr8SK4YiXlDEQbs3JkSxJ1SutNzwZx9ZJFfSokSCYe3BWMg6983kK5bNZ6U525pBnZSURHG+U0KLftg=
+    secure: lITD1lbDJ9n3/9L8Jw5332FiEbpsZ/+SfMgv7sKXqyubwRcfCjyEdlMFHp3/JPtVSoVO8Wg5fD8vFKEtS6cEbAtETs4YXwJ0eFd5K4waz9c1MxPLLSkJY7b+X2qWdHx3gSoA1cirMpvSHOGHudPoQEvhtA+6dGTRo/6nS7JKnRE=
 env:
   global:
-  - secure: JbFfHuaVanHRBQ6sZXPD5IfA6+hOM5JzhiHlXHrD20onqApbIobT6qmKz0pGb/XGoO4MPpJDd+4jdAB6RZuHzoLsbfUOog8jKkf8yuEZy3BEsq2sQGH3ShfwY5AazSLxDn9L1FphG4/vsIxjyoKQmN6+9CZtokRagHUS8tGxIE0=
-  - secure: udWXbgonf5gw1i0Hgs2Gf9E+po7foBLlZBkwYMC7VuBgjF0NqRu7LLOlz+I5GSmSfPe/P2fpkFrq0uiMtJpECKqpMsvPiPx1lYphDWe5Ev2luGSwNycCpJV5tB/AqDSicCnT/3wrl4VCLSw6xeOkxsA6AYE0b4eMrHQfg3slxrc=
+  - KITCHEN_YAML=.kitchen.cloud.yml
+  - secure: yJbD3s6lpObmFq/AHCSKEqI8uzBonWSNCV6n8keVLYz0WkfEWtZ1P0d2Fa5PEUu1fxvhVT5LKDF8U60VPmq7eVbz0P0z4MybI/v/NoQDx2rt1ky53S298/FkKEPqzZ/LZ74IP4CvXQenSHwbZXVFVLjDec1NTntkNG1j8KHHxEc=
+  - secure: s2FNP0T2DHDF7Oi4ayzpzMZC/1bmKhJyyu7AOPRGEkUJwCTIY0m0kNJuEENdfgHGU1SIPp4Kk4ytGxXVU5l82z1CuC25FCWpASyAWvL2mdj18m6BgfI5OY0PcPEt1VqQDhAocrpvIEjNDRO6T9iezafTdEDq9QRUtZ8+QjRUx8I=
