@@ -4,7 +4,7 @@ rvm:
 bundler_args: "--without kitchen_vagrant"
 before_install:
 - openssl aes-256-cbc -K $encrypted_6bb471548987_key -iv $encrypted_6bb471548987_iv
-  -in secret_keys.tar.enc -out secret_keys.tar -d
+  -in .travis/secret_keys.tar.enc -out ./travis/secret_keys.tar -d
 - tar xf .travis/secret_keys.tar -C .travis
 - mv .travis/travis_rsa ~/.ssh/id_rsa
 script:
