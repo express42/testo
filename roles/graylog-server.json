@@ -39,7 +39,7 @@
     "recipe[authbind]",
     "recipe[java]",
     "recipe[elasticsearch]",
-    "recipe[mongodb]",
+    "recipe[sc-mongodb]",
     "recipe[graylog2]",
     "recipe[graylog2::server]",
     "recipe[graylog2::authbind]",
