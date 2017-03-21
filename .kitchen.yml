@@ -41,6 +41,9 @@ suites:
       - role[base]
       - role[zabbix-server]
   - name: all
+    attributes:
+      java:
+        jdk_version: "8"
     run_list:
       - recipe[apt]
       - recipe[bsw_gpg]
