@@ -23,6 +23,16 @@ group :base do
   cookbook 'user'
 end
 
+group :chef do
+  cookbook 'chef_handler'
+  cookbook 'chef-ingredient'
+  cookbook 'chef-dk'
+  cookbook 'chef-server'
+  cookbook 'chef-server-ctl', git: 'git@github.com:stephenlauck/chef-server-ctl.git'
+  cookbook 'chef-sugar'
+  cookbook 'chef-zero'
+end
+
 group :databases do
   cookbook 'sc-mongodb', git: 'git@github.com:chef-brigade/mongodb-cookbook.git'
   cookbook 'postgresql_lwrp'
@@ -30,6 +40,7 @@ group :databases do
 end
 
 group :development do
+  cookbook 'build-essential'
   cookbook 'git'
   cookbook 'golang'
   cookbook 'java'
@@ -50,7 +61,6 @@ group :graylog2 do
 end
 
 group :services do
-  cookbook 'chef-server'
   cookbook 'cobbler', git: 'git@github.com:express42-cookbooks/cobbler.git'
   cookbook 'keepalived', git: 'git@github.com:express42-cookbooks/keepalived.git'
   cookbook 'memcached', git: 'git@github.com:express42-cookbooks/memcached.git'
