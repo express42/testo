@@ -14,7 +14,8 @@
         "admin_access_token": "NlXQ1B375BQPdocO1hzoVTKowWjAsgGzIoHfm3zMR0lHU24341XszauM52L5EZu0shR6CMJtM9cwdpxKMhGGDoybtcRtiQif"
       },
       "server": {
-        "java_opts": "-Djava.net.preferIPv4Stack=true -Xms512m -Xmx512m -XX:NewRatio=1 -XX:PermSize=128m -XX:MaxPermSize=256m -server -XX:+ResizeTLAB -XX:+UseConcMarkSweepGC -XX:+CMSConcurrentMTEnabled -XX:+CMSClassUnloadingEnabled -XX:+UseParNewGC -XX:-OmitStackTraceInFastThrow"
+        "java_opts": "-Djava.net.preferIPv4Stack=true -Xms512m -Xmx512m -XX:NewRatio=1 -XX:PermSize=128m -XX:MaxPermSize=256m -server -XX:+ResizeTLAB -XX:+UseConcMarkSweepGC -XX:+CMSConcurrentMTEnabled -XX:+CMSClassUnloadingEnabled -XX:+UseParNewGC -XX:-OmitStackTraceInFastThrow",
+        "install_tzdata_java": false
       },
       "elasticsearch": {
         "cluster_name": "elasticsearch"
@@ -29,6 +30,9 @@
     }
   },
   "override_attributes": {
+    "zabbix": {
+    "version": "3.0"
+    }
   },
   "chef_type": "role",
   "run_list": [
@@ -39,6 +43,8 @@
     "recipe[graylog2]",
     "recipe[graylog2::server]",
     "recipe[graylog2::authbind]",
+    "recipe[zabbix_lwrp::repository]",
+    "recipe[zabbix_lwrp::agent]",
     "recipe[zabbix_templates::graylog]"
   ],
   "env_run_lists": {
