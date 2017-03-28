@@ -6,3 +6,4 @@ packer/packer_virtualbox-iso_virtualbox.box
 tmp
 .kitchen/
 .kitchen.local.yml
+policies/*.lock.json

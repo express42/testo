@@ -3,78 +3,40 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_zero
+  name: policyfile_zero
   require_chef_omnibus: 12
   data_bags_path: data_bags
   encrypted_data_bag_secret_key_path: .chef/encrypted_data_bag_secret
-  client_rb:
-    environment: vagrant
 
 platforms:
-  - name: ubuntu-14.04
-    driver:
-      box: express42/ubuntu-14.04
+  #  - name: ubuntu-14.04
+  #  driver:
+  #    box: express42/ubuntu-14.04
   - name: ubuntu-16.04
     driver:
       box: express42/ubuntu-16.04
 
 suites:
   - name: base
-    run_list:
-      - role[base]
+    provisioner:
+      policyfile: policies/base.rb
+
   - name: chef-server
+    provisioner:
+      policyfile: policies/chef-server.rb
     driver:
       customize:
         <%= ENV['VAGRANT_DEFAULT_PROVIDER'] == 'parallels' ? 'memsize' : 'memory' %>: 2048
-    run_list:
-      - role[base]
-      - role[chef-server]
   - name: graylog-server
+    provisioner:
+      policyfile: policies/graylog-server.rb
     driver:
       customize:
         <%= ENV['VAGRANT_DEFAULT_PROVIDER'] == 'parallels' ? 'memsize' : 'memory' %>: 2048
-    run_list:
-      - role[base]
-      - role[graylog-server]
   - name: zabbix-server
-    run_list:
-      - role[base]
-      - role[zabbix-server]
+    provisioner:
+      policyfile: policies/zabbix-server.rb
+
   - name: all
-    attributes:
-      java:
-        jdk_version: "8"
-    run_list:
-      - recipe[apt]
-      - recipe[bsw_gpg]
-      - recipe[certificate]
-      - recipe[chef-client]
-      - recipe[chef-vault]
-      - recipe[cron]
-      - recipe[helpers_express42]
-      - recipe[locale]
-      - recipe[lvm]
-      - recipe[ntp]
-      - recipe[openssh]
-      - recipe[os-hardening]
-      - recipe[postfix]
-      - recipe[resolver]
-      - recipe[rsyslog]
-      - recipe[ssh_known_hosts]
-      - recipe[sudo]
-      - recipe[sysctl]
-      - recipe[timezone-ii]
-      - recipe[user]
-      - recipe[redis]
-      - recipe[git]
-      - recipe[golang]
-      - recipe[java]
-      - recipe[nodejs]
-      - recipe[pm2]
-      - recipe[ruby_lwrp]
-      - recipe[runit]
-      - recipe[keepalived]
-      - recipe[memcached]
-      - recipe[nfs]
-      - recipe[rabbitmq]
-      - recipe[s3_file]
+    provisioner:
+      policyfile: policies/all.rb
