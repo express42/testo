@@ -9,6 +9,7 @@ cookbook 'zabbix_lwrp', path: '../../zabbix_lwrp_chromko'
 cookbook 'zabbix_templates', git: 'git@github.com:express42-cookbooks/zabbix_templates.git'
 
 default['zabbix']['version'] = '3.0'
+default['zabbix']['api-version'] = '3.0.0'
 
 run_list.concat([
   'nginx::official-repo',
