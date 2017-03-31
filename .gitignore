@@ -7,3 +7,6 @@ tmp
 .kitchen/
 .kitchen.local.yml
 policies/*.lock.json
+.chef/*.pem
+.chef/encrypted_data_bag_secret
+.chef/knife.rb

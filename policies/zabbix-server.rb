@@ -2,10 +2,10 @@ instance_eval(IO.read("policies/base.rb"))
 
 name 'zabbix-server'
 
-cookbook 'nginx', git: 'git@github.com:chromko/chef-nginx.git'
+cookbook 'nginx', git: 'git@github.com:evilmartians/chef-nginx'
 cookbook 'php-fpm'
 cookbook 'postgresql_lwrp'
-cookbook 'zabbix_lwrp', path: '../../zabbix_lwrp_chromko'
+cookbook 'zabbix_lwrp'
 cookbook 'zabbix_templates', git: 'git@github.com:express42-cookbooks/zabbix_templates.git'
 
 default['zabbix']['version'] = '3.0'

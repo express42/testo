@@ -9,9 +9,9 @@ provisioner:
   encrypted_data_bag_secret_key_path: .chef/encrypted_data_bag_secret
 
 platforms:
-  #  - name: ubuntu-14.04
-  #  driver:
-  #    box: express42/ubuntu-14.04
+  - name: ubuntu-14.04
+    driver:
+      box: express42/ubuntu-14.04
   - name: ubuntu-16.04
     driver:
       box: express42/ubuntu-16.04
