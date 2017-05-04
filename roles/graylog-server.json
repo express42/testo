@@ -30,9 +30,6 @@
     }
   },
   "override_attributes": {
-    "zabbix": {
-    "version": "3.0"
-    }
   },
   "chef_type": "role",
   "run_list": [
