@@ -9,7 +9,7 @@
     "graylog2": {
       "password_secret": "NP8GePxntdVuQ5L3rK80fOR9mVU0gmopqMpmZdR58m7IZVo9hL4nIgGdG1L1Zh3O6jM0Delnso8EibLdhZ3F2lLXeklHdeib",
       "root_timezone": "UTC",
-      "root_password_sha2": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+      "root_password_sha2": "8c2411d3d85038aa9624860622f1d1c40b6d95cf763e0b7b5104ae5e8736dabf",
       "rest": {
         "admin_access_token": "NlXQ1B375BQPdocO1hzoVTKowWjAsgGzIoHfm3zMR0lHU24341XszauM52L5EZu0shR6CMJtM9cwdpxKMhGGDoybtcRtiQif"
       },
@@ -30,9 +30,6 @@
     }
   },
   "override_attributes": {
-    "zabbix": {
-    "version": "3.0"
-    }
   },
   "chef_type": "role",
   "run_list": [
@@ -43,9 +40,6 @@
     "recipe[graylog2]",
     "recipe[graylog2::server]",
     "recipe[graylog2::authbind]",
-    "recipe[zabbix_lwrp::repository]",
-    "recipe[zabbix_lwrp::agent]",
-    "recipe[zabbix_templates::graylog]"
   ],
   "env_run_lists": {
   }
