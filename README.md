@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/express42-cookbooks/testo.svg?branch=master)](https://travis-ci.org/express42-cookbooks/testo)
+[![Build Status](https://travis-ci.org/express42/testo.svg?branch=master)](https://travis-ci.org/express42/testo)
 
 # Overview
 
@@ -27,7 +27,7 @@ Get the [latest release of Chef Development Kit][ChefDK]
 
 Clone the repo from GitHub:
 ```
-$ git clone git@github.com:express42-cookbooks/testo.git
+$ git clone git@github.com:express42/testo.git
 ```
 
 Configure Knife:
