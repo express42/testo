@@ -7,15 +7,13 @@ driver:
 
 provisioner:
   name: chef_zero
-  data_bags_path: test/fixtures/data_bags
   require_chef_omnibus: 12
+  data_bags_path: data_bags
 
 platforms:
   - name: ubuntu-14.04
     driver_config:
       image: ubuntu-upstart:14.04
-      # forward:
-      #   - 8081:80
       disable_upstart: false
       run_command: '/sbin/init'
       provision_command:
@@ -28,8 +26,6 @@ platforms:
   - name: ubuntu-16.04
     driver_config:
       image: ubuntu:16.04
-      # forward:
-      #   - 8082:80
       run_command: '/sbin/init'
       provision_command:
         -  touch /etc/default/keyboard
@@ -41,8 +37,6 @@ platforms:
   - name: centos-7
     driver_config:
       image: centos:7
-      # forward:
-      #   - 8083:80
       run_command: '/usr/sbin/init'
       provision_command:
 #       Install package's docs
@@ -58,6 +52,7 @@ suites:
     provisioner:
       policyfile: policies/base.rb
 
+
   - name: chef-server
     driver_config:
       run_options: '--sysctl net.ipv6.conf.all.disable_ipv6=0'
@@ -67,6 +62,7 @@ suites:
   - name: graylog-server
     provisioner:
       policyfile: policies/graylog-server.rb
+
 
   - name: zabbix-server
     provisioner:
