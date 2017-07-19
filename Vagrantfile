@@ -28,7 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       # chef.encrypted_data_bag_secret_key_path = './.chef/encrypted_data_bag_secret'
 
       chef.run_list = [
-        'role[base]'
+        'role[base]',
       ]
     end
   end

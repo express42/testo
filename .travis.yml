@@ -7,7 +7,7 @@ before_install:
   -in .travis/secret_keys.tar.enc -out .travis/secret_keys.tar -d
 - tar xf .travis/secret_keys.tar -C .travis
 script:
-- bundle exec rubocop
+- bundle exec cookstyle
 - bundle exec kitchen test -d always
 notifications:
   slack:
