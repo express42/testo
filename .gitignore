@@ -6,3 +6,6 @@ packer/packer_virtualbox-iso_virtualbox.box
 tmp
 .kitchen/
 .kitchen.local.yml
+.chef/*.pem
+.chef/encrypted_data_bag_secret
+.chef/knife.rb

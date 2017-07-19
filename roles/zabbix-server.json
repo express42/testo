@@ -15,6 +15,7 @@
     "recipe[zabbix_lwrp::partition]",
     "recipe[zabbix_lwrp::database]",
     "recipe[zabbix_lwrp::server]",
+    "recipe[zabbix_lwrp::java_gateway]",
     "recipe[zabbix_lwrp::web]",
     "recipe[zabbix_templates::default]",
     "recipe[zabbix_templates::linux]",
